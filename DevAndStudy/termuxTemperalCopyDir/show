@@ -1,0 +1,19 @@
+#!/bin/sh
+
+chmod u+x /bin/show
+
+if [ -d $1 ];
+then
+	echo "# directory $1"
+	echo
+	for file in $(ls $1);
+	do
+		show "$1/$file"
+	done
+	echo
+else
+	echo "# file $1"
+	echo '```'
+	cat $1
+	echo '```'
+fi

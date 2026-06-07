@@ -1,0 +1,5 @@
+#!/bin/sh
+chmod u+x /bin/py
+clear
+python
+clear
